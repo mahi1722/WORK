@@ -1,0 +1,6 @@
+langchain
+langgraph
+langchain-community
+langchain-ollama
+langgraph-supervisor
+ipython
