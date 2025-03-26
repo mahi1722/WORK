@@ -4,4 +4,6 @@ langchain-community
 langchain-ollama
 langgraph-supervisor
 ipython
+python-dotenv
+pyyaml
 langchain-groq

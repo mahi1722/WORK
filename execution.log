@@ -1,0 +1,535 @@
+2025-03-26 23:35:18,584 - INFO - Starting execution for AD group creation ticket...
+2025-03-26 23:35:18,587 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:35:18,587 - INFO - Supervisor: Fetching ticket AD001 from ServiceNow
+2025-03-26 23:35:18,587 - INFO - Supervisor: Next step is ad_agent.
+2025-03-26 23:35:18,587 - INFO - AD Agent: Processing Active Directory request.
+2025-03-26 23:35:18,587 - INFO - AD Agent: Parsing variables from ticket description
+2025-03-26 23:35:18,594 - INFO - Parsed variables: {'group_name': 'MARKETING_TEAM', 'owner': 'jsmith@company.com'}
+2025-03-26 23:35:18,594 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:35:18,594 - INFO - Supervisor: Process complete. Ending.
+2025-03-26 23:35:18,594 - INFO - Starting execution for M365 license check ticket...
+2025-03-26 23:35:18,594 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:35:18,594 - INFO - Supervisor: Fetching ticket M365002 from ServiceNow
+2025-03-26 23:35:18,594 - INFO - Supervisor: Next step is m365_agent.
+2025-03-26 23:35:18,594 - INFO - M365 Agent: Processing Microsoft 365 request.
+2025-03-26 23:35:18,594 - INFO - M365 Agent: Parsing variables from ticket description
+2025-03-26 23:35:18,594 - INFO - Parsed variables: {}
+2025-03-26 23:35:18,605 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:35:18,606 - INFO - Supervisor: Process complete. Ending.
+2025-03-26 23:35:18,607 - INFO - Starting execution for AD owner verification ticket...
+2025-03-26 23:35:18,610 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:35:18,611 - INFO - Supervisor: Fetching ticket AD003 from ServiceNow
+2025-03-26 23:35:18,612 - INFO - Supervisor: Next step is ad_agent.
+2025-03-26 23:35:18,614 - INFO - AD Agent: Processing Active Directory request.
+2025-03-26 23:35:18,614 - INFO - AD Agent: Parsing variables from ticket description
+2025-03-26 23:35:18,616 - INFO - Parsed variables: {'owner': 'admin@company.com'}
+2025-03-26 23:35:18,618 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:35:18,619 - INFO - Supervisor: Process complete. Ending.
+2025-03-26 23:46:59,244 - INFO - Starting execution for AD group creation ticket...
+2025-03-26 23:46:59,246 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:46:59,246 - INFO - Supervisor: Fetching ticket AD001 from ServiceNow
+2025-03-26 23:46:59,246 - INFO - Supervisor: Next step is ad_agent.
+2025-03-26 23:46:59,246 - INFO - AD Agent: Processing Active Directory request.
+2025-03-26 23:46:59,246 - INFO - AD Agent: Parsing variables from ticket description
+2025-03-26 23:46:59,246 - INFO - Parsed variables: {'group_name': 'MARKETING_TEAM', 'owner': 'jsmith@company.com'}
+2025-03-26 23:46:59,254 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:46:59,254 - INFO - Supervisor: Process complete. Ending.
+2025-03-26 23:46:59,254 - INFO - Starting execution for M365 license check ticket...
+2025-03-26 23:46:59,254 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:46:59,261 - INFO - Supervisor: Fetching ticket M365002 from ServiceNow
+2025-03-26 23:46:59,264 - INFO - Supervisor: Next step is m365_agent.
+2025-03-26 23:46:59,267 - INFO - M365 Agent: Processing Microsoft 365 request.
+2025-03-26 23:46:59,268 - INFO - M365 Agent: Parsing variables from ticket description
+2025-03-26 23:46:59,269 - INFO - Parsed variables: {}
+2025-03-26 23:46:59,270 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:46:59,271 - INFO - Supervisor: Process complete. Ending.
+2025-03-26 23:46:59,273 - INFO - Starting execution for AD owner verification ticket...
+2025-03-26 23:46:59,279 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:46:59,281 - INFO - Supervisor: Fetching ticket AD003 from ServiceNow
+2025-03-26 23:46:59,282 - INFO - Supervisor: Next step is ad_agent.
+2025-03-26 23:46:59,291 - INFO - AD Agent: Processing Active Directory request.
+2025-03-26 23:46:59,295 - INFO - AD Agent: Parsing variables from ticket description
+2025-03-26 23:46:59,299 - INFO - Parsed variables: {'owner': 'admin@company.com'}
+2025-03-26 23:46:59,302 - INFO - Supervisor: Evaluating next step.
+2025-03-26 23:46:59,305 - INFO - Supervisor: Process complete. Ending.
+2025-03-27 00:03:24,715 - INFO - Starting execution for Active Directory task...
+2025-03-27 00:03:24,721 - INFO - Supervisor: Evaluating next step.
+2025-03-27 00:03:24,722 - INFO - Supervisor: Next step is ad_agent.
+2025-03-27 00:03:24,724 - INFO - AD Agent: Executing tools.
+2025-03-27 00:03:24,725 - INFO - Executing tool: parse_variables
+2025-03-27 00:03:24,725 - INFO - Tool parse_variables result: Parsed variables from query: Need to create an Active Directory group for the sales team
+2025-03-27 00:03:24,727 - INFO - Supervisor: Evaluating next step.
+2025-03-27 00:03:24,728 - INFO - Supervisor: Next step is ad_agent.
+2025-03-27 00:03:24,730 - INFO - AD Agent: Executing tools.
+2025-03-27 00:03:24,730 - INFO - Executing tool: check_ad_group_existence
+2025-03-27 00:03:24,730 - INFO - Tool check_ad_group_existence result: AD group 'Sales Team' exists.
+2025-03-27 00:03:24,730 - INFO - Supervisor: Evaluating next step.
+2025-03-27 00:03:24,730 - INFO - Supervisor: Next step is ad_agent.
+2025-03-27 00:03:24,735 - INFO - AD Agent: Executing tools.
+2025-03-27 00:03:24,736 - INFO - Executing tool: check_owner_existence
+2025-03-27 00:03:24,738 - INFO - Tool check_owner_existence result: Owner 'John Doe' exists.
+2025-03-27 00:03:24,740 - INFO - Supervisor: Evaluating next step.
+2025-03-27 00:03:24,741 - INFO - Supervisor: Next step is ad_agent.
+2025-03-27 00:03:24,742 - INFO - AD Agent: Executing tools.
+2025-03-27 00:03:24,743 - INFO - Executing tool: create_ad_group
+2025-03-27 00:03:24,743 - INFO - Tool create_ad_group result: AD group 'Sales Team Group' created.
+2025-03-27 00:03:24,745 - INFO - Supervisor: Evaluating next step.
+2025-03-27 00:03:24,746 - INFO - Supervisor: Next step is ad_agent.
+2025-03-27 00:03:24,748 - INFO - AD Agent: Executing tools.
+2025-03-27 00:03:24,749 - INFO - AD Agent: No more tools to execute. Marking process as complete.
+2025-03-27 00:03:24,750 - INFO - Supervisor: Evaluating next step.
+2025-03-27 00:03:24,751 - INFO - Supervisor: Process complete. Ending.
+2025-03-27 00:03:24,752 - INFO - Starting execution for Microsoft 365 task...
+2025-03-27 00:03:24,754 - INFO - Supervisor: Evaluating next step.
+2025-03-27 00:03:24,754 - INFO - Supervisor: Next step is m365_agent.
+2025-03-27 00:03:24,754 - INFO - M365 Agent: Executing license check.
+2025-03-27 00:03:24,754 - INFO - Executing tool: check_m365_license
+2025-03-27 00:03:24,754 - INFO - Tool check_m365_license result: M365 license for user 'user123' is valid.
+2025-03-27 00:03:24,754 - INFO - Supervisor: Evaluating next step.
+2025-03-27 00:03:24,754 - INFO - Supervisor: Process complete. Ending.
+2025-03-27 00:07:28,195 - INFO - Supervisor evaluating ticket: AD001
+2025-03-27 00:07:28,195 - INFO - AD Agent processing ticket: AD001
+2025-03-27 00:07:28,205 - INFO - Checking AD group: Sales_Team
+2025-03-27 00:08:28,269 - INFO - Supervisor evaluating ticket: AD001
+2025-03-27 00:08:28,269 - INFO - AD Agent processing ticket: AD001
+2025-03-27 00:08:28,275 - INFO - Checking AD group: Sales_Team
+2025-03-27 00:10:41,829 - INFO - Processing AD ticket: AD001
+2025-03-27 00:10:41,831 - INFO - Checking AD group: Sales_Team
+2025-03-27 00:10:41,835 - INFO - Creating AD group Sales_Team with owner admin@company.com
+2025-03-27 00:10:41,837 - INFO - Processing M365 ticket: M365001
+2025-03-27 00:10:41,838 - INFO - Checking license for user@company.com
+2025-03-27 00:13:44,063 - INFO - Supervisor evaluating ticket: AD001
+2025-03-27 00:13:44,067 - INFO - AD Agent processing ticket: AD001
+2025-03-27 00:13:45,204 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-27 00:14:50,065 - INFO - Supervisor evaluating ticket: AD001
+2025-03-27 00:14:50,065 - INFO - AD Agent processing ticket: AD001
+2025-03-27 00:14:50,715 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:14:50,773 - INFO - Creating AD group MyGroup with owner john.doe@example.com
+2025-03-27 00:14:51,335 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:14:51,345 - INFO - Creating AD group Default_Group with owner jane.doe@example.com
+2025-03-27 00:14:51,888 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:14:51,909 - INFO - Creating AD group SampleGroup with owner sam.smith@example.com
+2025-03-27 00:14:52,457 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:14:52,465 - INFO - Creating AD group AlternativeGroup with owner dave.johnson@example.com
+2025-03-27 00:14:53,025 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:14:53,037 - INFO - Creating AD group MyGroup with owner john.doe@example.com
+2025-03-27 00:14:53,822 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:14:53,839 - INFO - Creating AD group MyNewGroup with owner bob.smith@example.com
+2025-03-27 00:14:54,644 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:14:54,655 - INFO - Creating AD group OldGroup with owner alice.chan@example.com
+2025-03-27 00:14:54,771 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-27 00:14:54,775 - INFO - Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2025-03-27 00:14:56,562 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:14:56,575 - INFO - Creating AD group NewGroup with owner charlie.davis@example.com
+2025-03-27 00:14:56,695 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-27 00:14:56,697 - INFO - Retrying request to /openai/v1/chat/completions in 14.000000 seconds
+2025-03-27 00:15:11,549 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:15:11,555 - INFO - Creating AD group MyExistingGroup with owner old_owner@example.com
+2025-03-27 00:15:11,660 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-27 00:15:11,667 - INFO - Retrying request to /openai/v1/chat/completions in 15.000000 seconds
+2025-03-27 00:15:27,528 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:15:27,545 - INFO - Creating AD group AlternativeGroup with owner jane.doe@example.com
+2025-03-27 00:15:27,660 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-27 00:15:27,667 - INFO - Retrying request to /openai/v1/chat/completions in 17.000000 seconds
+2025-03-27 00:15:45,605 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:15:45,768 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-27 00:15:45,775 - INFO - Retrying request to /openai/v1/chat/completions in 16.000000 seconds
+2025-03-27 00:16:02,680 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:16:02,865 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-27 00:16:02,876 - INFO - Retrying request to /openai/v1/chat/completions in 17.000000 seconds
+2025-03-27 00:16:20,783 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:17:43,052 - INFO - Supervisor evaluating ticket: AD001
+2025-03-27 00:17:43,055 - INFO - AD Agent processing ticket: AD001
+2025-03-27 00:17:44,061 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-27 00:26:02,549 - INFO - Supervisor evaluating ticket: AD001
+2025-03-27 00:26:02,555 - INFO - AD Agent processing ticket: AD001
+2025-03-27 00:26:02,555 - INFO - Checking AD group: Sales_Team
+2025-03-27 00:26:02,555 - INFO - Creating AD group Sales_Team with owner admin@company.com
+2025-03-27 00:26:02,563 - INFO - Supervisor evaluating ticket: AD001
+2025-03-27 00:26:02,567 - INFO - Supervisor evaluating ticket: M365001
+2025-03-27 00:26:02,569 - INFO - M365 Agent processing ticket: M365001
+2025-03-27 00:26:02,572 - INFO - Checking license for user@company.com
+2025-03-27 00:26:02,576 - INFO - Supervisor evaluating ticket: M365001
+2025-03-27 00:37:07,591 - INFO - 
+Processing Ticket AD001
+2025-03-27 00:37:07,601 - ERROR - Error processing AD001: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:37:07,603 - INFO - 
+Processing Ticket M365001
+2025-03-27 00:37:07,612 - ERROR - Error processing M365001: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:37:07,618 - INFO - 
+Processing Ticket UNK001
+2025-03-27 00:37:07,623 - ERROR - Error processing UNK001: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:37:07,625 - INFO - 
+Processing Ticket AD002
+2025-03-27 00:37:07,632 - ERROR - Error processing AD002: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:38:36,976 - INFO - 
+Processing Ticket AD001
+2025-03-27 00:38:36,980 - ERROR - Error processing AD001: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:38:36,982 - INFO - 
+Processing Ticket M365001
+2025-03-27 00:38:36,986 - ERROR - Error processing M365001: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:38:36,988 - INFO - 
+Processing Ticket UNK001
+2025-03-27 00:38:36,992 - ERROR - Error processing UNK001: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:38:36,996 - INFO - 
+Processing Ticket AD002
+2025-03-27 00:38:37,000 - ERROR - Error processing AD002: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:38:47,962 - INFO - 
+Processing Ticket AD001
+2025-03-27 00:38:47,968 - ERROR - Error processing AD001: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:38:47,970 - INFO - 
+Processing Ticket M365001
+2025-03-27 00:38:47,982 - ERROR - Error processing M365001: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:38:47,985 - INFO - 
+Processing Ticket UNK001
+2025-03-27 00:38:47,991 - ERROR - Error processing UNK001: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:38:47,991 - INFO - 
+Processing Ticket AD002
+2025-03-27 00:38:47,996 - ERROR - Error processing AD002: The api_key client option must be set either by passing api_key to the client or by setting the GROQ_API_KEY environment variable
+2025-03-27 00:41:08,691 - INFO - Using simple keyword-based routing
+2025-03-27 00:41:08,717 - INFO - 
+Processing Ticket AD001
+2025-03-27 00:41:08,732 - INFO - AD Agent processing: AD001
+2025-03-27 00:41:08,743 - INFO - Checking AD group: Sales_Team
+2025-03-27 00:41:08,759 - ERROR - Error processing AD001: 'str' object has no attribute 'parent_run_id'
+2025-03-27 00:41:08,763 - INFO - 
+Processing Ticket M365001
+2025-03-27 00:41:08,767 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,772 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,776 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,781 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,793 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,795 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,800 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,803 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,805 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,805 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,812 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,816 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,822 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,825 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,826 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,832 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,837 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,837 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,843 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,848 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,853 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,855 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,855 - INFO - M365 Agent processing: M365001
+2025-03-27 00:41:08,862 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:41:08,862 - ERROR - Error processing M365001: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+2025-03-27 00:41:08,868 - INFO - 
+Processing Ticket UNK001
+2025-03-27 00:41:08,872 - INFO - 
+Processing Ticket AD002
+2025-03-27 00:45:37,877 - INFO - Using simple keyword-based routing
+2025-03-27 00:45:37,879 - INFO - 
+Processing Ticket AD001
+2025-03-27 00:45:37,885 - INFO - AD Agent processing: AD001
+2025-03-27 00:45:37,887 - INFO - Checking AD group: Sales_Team
+2025-03-27 00:45:37,887 - ERROR - Error processing AD001: 'str' object has no attribute 'parent_run_id'
+2025-03-27 00:45:37,887 - INFO - 
+Processing Ticket M365001
+2025-03-27 00:45:37,895 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,895 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,902 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,909 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,910 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,910 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,922 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,927 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,927 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,935 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,935 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,935 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,943 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,943 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,943 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,951 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,959 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,959 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,959 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,968 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,975 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,979 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,983 - INFO - M365 Agent processing: M365001
+2025-03-27 00:45:37,988 - INFO - Checking M365 license for: user@company.com
+2025-03-27 00:45:37,994 - ERROR - Error processing M365001: Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT
+2025-03-27 00:45:37,994 - INFO - 
+Processing Ticket UNK001
+2025-03-27 00:45:38,002 - INFO - 
+Processing Ticket AD002
+2025-03-27 00:48:33,252 - INFO - Using LLM-powered routing
+2025-03-27 00:51:33,042 - INFO - Using LLM-powered routing
+2025-03-27 00:51:33,050 - INFO - 
+Processing Ticket AD001
+2025-03-27 00:51:33,241 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:51:33,265 - ERROR - Error processing AD001: 'supervisor'
+2025-03-27 00:51:33,271 - INFO - 
+Processing Ticket M365001
+2025-03-27 00:51:33,401 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:51:33,408 - ERROR - Error processing M365001: 'supervisor'
+2025-03-27 00:51:33,408 - INFO - 
+Processing Ticket UNK001
+2025-03-27 00:51:33,543 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:51:33,548 - ERROR - Error processing UNK001: 'supervisor'
+2025-03-27 00:51:33,548 - INFO - 
+Processing Ticket AD002
+2025-03-27 00:51:33,693 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 00:51:33,706 - ERROR - Error processing AD002: 'supervisor'
+2025-03-27 01:00:41,820 - INFO - Using LLM-powered routing
+2025-03-27 01:00:41,828 - INFO - 
+Processing Ticket AD001
+2025-03-27 01:00:41,828 - ERROR - Error processing AD001: 'GraphState' object has no attribute 'get'
+2025-03-27 01:00:41,836 - INFO - 
+Processing Ticket M365001
+2025-03-27 01:00:41,838 - ERROR - Error processing M365001: 'GraphState' object has no attribute 'get'
+2025-03-27 01:00:41,843 - INFO - 
+Processing Ticket UNK001
+2025-03-27 01:00:41,847 - ERROR - Error processing UNK001: 'GraphState' object has no attribute 'get'
+2025-03-27 01:00:41,852 - INFO - 
+Processing Ticket AD002
+2025-03-27 01:00:41,858 - ERROR - Error processing AD002: 'GraphState' object has no attribute 'get'
+2025-03-27 01:05:22,272 - INFO - Using LLM-powered routing
+2025-03-27 01:05:22,278 - INFO - 
+Processing Ticket AD001
+2025-03-27 01:05:22,281 - ERROR - Error processing AD001: 'GraphState' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 273, in <module>
+    result = workflow.invoke(initial_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\__init__.py", line 2683, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\__init__.py", line 2331, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\runner.py", line 146, in tick
+    run_with_retry(
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\retry.py", line 40, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\utils\runnable.py", line 606, in invoke
+    input = step.invoke(input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\utils\runnable.py", line 371, in invoke
+    ret = context.run(self.func, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 125, in llm_supervisor_node
+    state_obj = GraphState.from_dict(state)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 113, in from_dict
+    ticket_number=data.get("ticket_number", ""),
+                  ^^^^^^^^
+AttributeError: 'GraphState' object has no attribute 'get'
+During task with name 'supervisor' and id '6492a2c7-1af0-4eac-7d9a-79f76277dfb8'
+2025-03-27 01:05:22,281 - INFO - 
+Processing Ticket M365001
+2025-03-27 01:05:22,288 - ERROR - Error processing M365001: 'GraphState' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 273, in <module>
+    result = workflow.invoke(initial_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\__init__.py", line 2683, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\__init__.py", line 2331, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\runner.py", line 146, in tick
+    run_with_retry(
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\retry.py", line 40, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\utils\runnable.py", line 606, in invoke
+    input = step.invoke(input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\utils\runnable.py", line 371, in invoke
+    ret = context.run(self.func, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 125, in llm_supervisor_node
+    state_obj = GraphState.from_dict(state)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 113, in from_dict
+    ticket_number=data.get("ticket_number", ""),
+                  ^^^^^^^^
+AttributeError: 'GraphState' object has no attribute 'get'
+During task with name 'supervisor' and id '1d360abb-b064-03f8-26cc-b18bae7afe44'
+2025-03-27 01:05:22,294 - INFO - 
+Processing Ticket UNK001
+2025-03-27 01:05:22,298 - ERROR - Error processing UNK001: 'GraphState' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 273, in <module>
+    result = workflow.invoke(initial_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\__init__.py", line 2683, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\__init__.py", line 2331, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\runner.py", line 146, in tick
+    run_with_retry(
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\retry.py", line 40, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\utils\runnable.py", line 606, in invoke
+    input = step.invoke(input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\utils\runnable.py", line 371, in invoke
+    ret = context.run(self.func, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 125, in llm_supervisor_node
+    state_obj = GraphState.from_dict(state)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 113, in from_dict
+    ticket_number=data.get("ticket_number", ""),
+                  ^^^^^^^^
+AttributeError: 'GraphState' object has no attribute 'get'
+During task with name 'supervisor' and id '33cad050-195c-a3b0-86bb-7c3f335629d0'
+2025-03-27 01:05:22,298 - INFO - 
+Processing Ticket AD002
+2025-03-27 01:05:22,306 - ERROR - Error processing AD002: 'GraphState' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 273, in <module>
+    result = workflow.invoke(initial_state)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\__init__.py", line 2683, in invoke
+    for chunk in self.stream(
+                 ^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\__init__.py", line 2331, in stream
+    for _ in runner.tick(
+             ^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\runner.py", line 146, in tick
+    run_with_retry(
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\pregel\retry.py", line 40, in run_with_retry
+    return task.proc.invoke(task.input, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\utils\runnable.py", line 606, in invoke
+    input = step.invoke(input, config, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\mahid\OneDrive\Documents\WORK\venv\Lib\site-packages\langgraph\utils\runnable.py", line 371, in invoke
+    ret = context.run(self.func, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 125, in llm_supervisor_node
+    state_obj = GraphState.from_dict(state)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\mahid\AppData\Local\Temp\ipykernel_16388\930656367.py", line 113, in from_dict
+    ticket_number=data.get("ticket_number", ""),
+                  ^^^^^^^^
+AttributeError: 'GraphState' object has no attribute 'get'
+During task with name 'supervisor' and id '9be6e3dd-c9c3-8dc4-dce8-9ef8194a0cfa'
+2025-03-27 01:05:46,078 - INFO - Using LLM-powered routing
+2025-03-27 01:05:46,100 - INFO - 
+Processing Ticket AD001
+2025-03-27 01:05:46,100 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:05:46,106 - ERROR - Error processing AD001: 'GraphState' object has no attribute 'get'
+2025-03-27 01:05:46,108 - INFO - 
+Processing Ticket M365001
+2025-03-27 01:05:46,114 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:05:46,117 - ERROR - Error processing M365001: 'GraphState' object has no attribute 'get'
+2025-03-27 01:05:46,117 - INFO - 
+Processing Ticket UNK001
+2025-03-27 01:05:46,122 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:05:46,124 - ERROR - Error processing UNK001: 'GraphState' object has no attribute 'get'
+2025-03-27 01:05:46,124 - INFO - 
+Processing Ticket AD002
+2025-03-27 01:05:46,132 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:05:46,134 - ERROR - Error processing AD002: 'GraphState' object has no attribute 'get'
+2025-03-27 01:08:13,388 - INFO - Using LLM-powered routing
+2025-03-27 01:08:13,405 - INFO - 
+Processing Ticket AD001
+2025-03-27 01:08:13,405 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:08:13,405 - ERROR - Error processing AD001: Expected dict, got <__main__.GraphState object at 0x0000019450D91AF0>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:08:13,405 - INFO - 
+Processing Ticket M365001
+2025-03-27 01:08:13,415 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:08:13,417 - ERROR - Error processing M365001: Expected dict, got <__main__.GraphState object at 0x0000019451D00B90>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:08:13,419 - INFO - 
+Processing Ticket UNK001
+2025-03-27 01:08:13,422 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:08:13,424 - ERROR - Error processing UNK001: Expected dict, got <__main__.GraphState object at 0x0000019451CBB3E0>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:08:13,425 - INFO - 
+Processing Ticket AD002
+2025-03-27 01:08:13,428 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:08:13,430 - ERROR - Error processing AD002: Expected dict, got <__main__.GraphState object at 0x0000019451CFFEC0>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:10:02,250 - INFO - Using LLM-powered routing
+2025-03-27 01:10:02,266 - INFO - 
+Processing Ticket AD001
+2025-03-27 01:10:02,272 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:10:02,274 - ERROR - Error processing AD001: Expected dict, got <__main__.GraphState object at 0x0000019450D935F0>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:10:02,276 - INFO - 
+Processing Ticket M365001
+2025-03-27 01:10:02,277 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:10:02,279 - ERROR - Error processing M365001: Expected dict, got <__main__.GraphState object at 0x0000019450D8C050>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:10:02,280 - INFO - 
+Processing Ticket UNK001
+2025-03-27 01:10:02,285 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:10:02,289 - ERROR - Error processing UNK001: Expected dict, got <__main__.GraphState object at 0x0000019450D77620>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:10:02,291 - INFO - 
+Processing Ticket AD002
+2025-03-27 01:10:02,291 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:10:02,299 - ERROR - Error processing AD002: Expected dict, got <__main__.GraphState object at 0x0000019450D77EF0>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:10:53,526 - INFO - Using LLM-powered routing
+2025-03-27 01:10:53,542 - INFO - 
+Processing Ticket AD001
+2025-03-27 01:10:53,552 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:10:53,553 - ERROR - Error processing AD001: Expected dict, got <__main__.GraphState object at 0x0000019450D91AC0>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:10:53,556 - INFO - 
+Processing Ticket M365001
+2025-03-27 01:10:53,560 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:10:53,563 - ERROR - Error processing M365001: Expected dict, got <__main__.GraphState object at 0x0000019451D03F80>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:10:53,566 - INFO - 
+Processing Ticket UNK001
+2025-03-27 01:10:53,569 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:10:53,570 - ERROR - Error processing UNK001: Expected dict, got <__main__.GraphState object at 0x0000019450D73770>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:10:53,572 - INFO - 
+Processing Ticket AD002
+2025-03-27 01:10:53,576 - ERROR - Error in llm_supervisor_node: 'GraphState' object has no attribute 'get'
+2025-03-27 01:10:53,580 - ERROR - Error processing AD002: Expected dict, got <__main__.GraphState object at 0x0000019450D71400>
+For troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/INVALID_GRAPH_NODE_RETURN_VALUE
+2025-03-27 01:13:59,784 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 01:14:00,079 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 01:14:00,368 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 01:14:00,668 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-27 01:27:48,155 - INFO - Starting execution for AD group creation ticket...
+2025-03-27 01:27:48,165 - INFO - Supervisor: Evaluating next step.
+2025-03-27 01:27:48,168 - INFO - Supervisor: Fetching ticket AD001 from ServiceNow
+2025-03-27 01:27:48,168 - INFO - Supervisor: Next step is ad_agent.
+2025-03-27 01:27:48,168 - INFO - AD Agent: Processing Active Directory request.
+2025-03-27 01:27:48,168 - INFO - AD Agent: Parsing variables from ticket description
+2025-03-27 01:27:48,175 - INFO - Parsed variables: {'group_name': 'MARKETING_TEAM', 'owner': 'jsmith@company.com'}
+2025-03-27 01:27:48,179 - INFO - Supervisor: Evaluating next step.
+2025-03-27 01:27:48,180 - INFO - Supervisor: Process complete. Ending.
+2025-03-27 01:27:48,184 - INFO - Starting execution for M365 license check ticket...
+2025-03-27 01:27:48,187 - INFO - Supervisor: Evaluating next step.
+2025-03-27 01:27:48,190 - INFO - Supervisor: Fetching ticket M365002 from ServiceNow
+2025-03-27 01:27:48,192 - INFO - Supervisor: Next step is m365_agent.
+2025-03-27 01:27:48,195 - INFO - M365 Agent: Processing Microsoft 365 request.
+2025-03-27 01:27:48,196 - INFO - M365 Agent: Parsing variables from ticket description
+2025-03-27 01:27:48,198 - INFO - Parsed variables: {}
+2025-03-27 01:27:48,201 - INFO - Supervisor: Evaluating next step.
+2025-03-27 01:27:48,204 - INFO - Supervisor: Process complete. Ending.
+2025-03-27 01:27:48,207 - INFO - Starting execution for AD owner verification ticket...
+2025-03-27 01:27:48,212 - INFO - Supervisor: Evaluating next step.
+2025-03-27 01:27:48,215 - INFO - Supervisor: Fetching ticket AD003 from ServiceNow
+2025-03-27 01:27:48,219 - INFO - Supervisor: Next step is ad_agent.
+2025-03-27 01:27:48,222 - INFO - AD Agent: Processing Active Directory request.
+2025-03-27 01:27:48,225 - INFO - AD Agent: Parsing variables from ticket description
+2025-03-27 01:27:48,228 - INFO - Parsed variables: {'owner': 'admin@company.com'}
+2025-03-27 01:27:48,232 - INFO - Supervisor: Evaluating next step.
+2025-03-27 01:27:48,234 - INFO - Supervisor: Process complete. Ending.
