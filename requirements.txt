@@ -4,3 +4,4 @@ langchain-community
 langchain-ollama
 langgraph-supervisor
 ipython
+langchain-groq
