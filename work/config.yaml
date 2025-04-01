@@ -1,0 +1,39 @@
+Ad_agent:
+  CreateSecurityGroup:
+    - parse_varaibles
+    - Check_Ad_Group_Existence
+    - Check_Owner_Existance
+    - Create_Ad_Group
+  AddUsersToGroup:
+    - Check_User_existence_output_samaccount
+    - Add_user_to_security_group(single_or_multiple)
+
+m365_agent:
+  CreateDL:
+    - create_dl
+  ModifyDL:
+    - modify_dl
+  CheckLicense:
+    - check_m365_license
+
+workflows:
+  SecurityGroupCreation:
+    agent: ad_agent
+    tools:
+      - parse_varaibles
+      - Check_Ad_Group_Existence
+      - Create_Ad_Group
+  
+  DistributionListCreation:
+    agent: m365_agent
+    tools:
+      - create_dl
+  
+  HybridUserSetup:
+    description: "Create AD user and configure M365 license"
+    tools:
+      - parse_varaibles
+      - SAMNameValidation
+      - DisplayNameValidation
+      - create_dl
+      - check_m365_license

@@ -1,0 +1,43 @@
+tools:
+  parse_variables:
+    description: "Parse variables from the ticket description."
+    script: "scripts/parse_variables.ps1"
+  check_ad_user_existence:
+    description: "Check if an AD user exists."
+    script: "scripts/check_ad_user_existence.ps1"
+  create_ad_user:
+    description: "Create a new AD user."
+    script: "scripts/create_ad_user.ps1"
+  check_ad_group_existence:
+    description: "Check if an AD security group exists."
+    script: "scripts/check_ad_group_existence.ps1"
+  create_ad_group:
+    description: "Create a new AD security group."
+    script: "scripts/create_ad_group.ps1"
+  check_m365_license:
+    description: "Check the Microsoft 365 license status for a user."
+    script: "scripts/check_m365_license.ps1"
+  update_ticket:
+    description: "Update the ticket state or work notes in ServiceNow."
+    script: "scripts/update_ticket.ps1"
+workflows:
+  ADUserCreation:
+    description: "Create a new Active Directory user."
+    tools:
+      - parse_variables
+      - check_ad_user_existence
+      - create_ad_user
+      - update_ticket
+  SecurityGroupCreation:
+    description: "Create a new Active Directory security group."
+    tools:
+      - parse_variables
+      - check_ad_group_existence
+      - create_ad_group
+      - update_ticket
+  M365LicenseCheck:
+    description: "Check Microsoft 365 license for a user."
+    tools:
+      - parse_variables
+      - check_m365_license
+      - update_ticket
