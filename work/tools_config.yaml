@@ -1,0 +1,34 @@
+tools:
+  parse_variables:
+    script: "parse_variables"
+    description: "Parse variables from the input query for further processing"
+  SAMNameValidation:
+    script: "SAMNameValidation"
+    description: "Validate SAM account name format"
+  DisplayNameValidation:
+    script: "DisplayNameValidation"
+    description: "Validate display name format"
+  Check_Ad_Group_Existence:
+    script: "Check_Ad_Group_Existence"
+    description: "Check if an Active Directory security group exists"
+  Check_Owner_Existance:
+    script: "Check_Owner_Existance"
+    description: "Verify if the specified owner exists in Active Directory"
+  Create_Ad_Group:
+    script: "Create_Ad_Group"
+    description: "Create a new Active Directory security group"
+  Check_User_existence_output_samaccount:
+    script: "Check_User_existence_output_samaccount"
+    description: "Check if user exists and return their SAM account name"
+  "Add_user_to_security_group(single_or_multiple)":
+    script: "Add_user_to_security_group(single_or_multiple)"
+    description: "Add one or more users to an Active Directory security group"
+  create_dl:
+    script: "create_dl"
+    description: "Create a Microsoft 365 distribution list"
+  modify_dl:
+    script: "modify_dl"
+    description: "Modify an existing Microsoft 365 distribution list"
+  check_m365_license:
+    script: "check_m365_license"
+    description: "Check Microsoft 365 license assignments for a user"

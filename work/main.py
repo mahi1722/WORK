@@ -20,9 +20,12 @@ model = ChatGroq(
 # Base directory for scripts
 SCRIPTS_DIR = "scripts"
 
-# Load config.yaml
+# Load config files
 with open("config.yaml", "r") as file:
     CONFIG = yaml.safe_load(file)
+
+with open("tools_config.yaml", "r") as file:
+    TOOLS_CONFIG = yaml.safe_load(file)
 
 # Helper function to parse PowerShell JSON output
 def parse_powershell_output(raw_output: str) -> Dict[str, Any]:
@@ -74,148 +77,34 @@ def run_powershell_script(script_name: str, argument: str) -> Dict[str, Any]:
             "ErrorMessage": f"Error executing {script_name}.ps1: {e.stderr}"
         }
 
-
-# Tool functions with docstrings
-def parse_variables(query: str) -> Dict[str, Any]:
-    """Parse variables from the input query for further processing.
+# Dynamic tool function generator
+def create_tool_function(tool_config: Dict[str, str]) -> Callable[[str], Dict[str, Any]]:
+    """Create a tool function dynamically based on config."""
+    script_name = tool_config["script"]
+    
+    def tool_function(query: str) -> Dict[str, Any]:
+        return run_powershell_script(script_name, query)
+    
+    tool_function.__doc__ = f"""{tool_config["description"]}
     
     Args:
-        query (str): The input query containing variables to parse
+        query (str): Input for the tool
         
     Returns:
         Dict[str, Any]: Status and message information
     """
-    return run_powershell_script("parse_varaibles", query)
+    return tool_function
 
-def check_ad_group_existence(group_name: str) -> Dict[str, Any]:
-    """Check if an Active Directory security group exists.
-    
-    Args:
-        group_name (str): Name of the AD security group to check
-        
-    Returns:
-        Dict[str, Any]: Status and message information
-    """
-    return run_powershell_script("Check_Ad_Group_Existence", group_name)
-
-def check_owner_existence(owner_name: str) -> Dict[str, Any]:
-    """Verify if the specified owner exists in Active Directory.
-    
-    Args:
-        owner_name (str): Name of the owner to check
-        
-    Returns:
-        Dict[str, Any]: Status and message information
-    """
-    return run_powershell_script("Check_Owner_Existance", owner_name)
-
-def create_ad_group(group_name: str) -> Dict[str, Any]:
-    """Create a new Active Directory security group.
-    
-    Args:
-        group_name (str): Name of the group to create
-        
-    Returns:
-        Dict[str, Any]: Status and message information
-    """
-    return run_powershell_script("Create_Ad_Group", group_name)
-
-def check_m365_license(user_id: str) -> Dict[str, Any]:
-    """Check Microsoft 365 license assignments for a user.
-    
-    Args:
-        user_id (str): User ID to check licenses for
-        
-    Returns:
-        Dict[str, Any]: Status and message information
-    """
-    return run_powershell_script("check_m365_license", user_id)
-
-def sam_name_validation(query: str) -> Dict[str, Any]:
-    """Validate SAM account name format.
-    
-    Args:
-        query (str): SAM account name to validate
-        
-    Returns:
-        Dict[str, Any]: Status and message information
-    """
-    return run_powershell_script("SAMNameValidation", query)
-
-def display_name_validation(query: str) -> Dict[str, Any]:
-    """Validate display name format.
-    
-    Args:
-        query (str): Display name to validate
-        
-    Returns:
-        Dict[str, Any]: Status and message information
-    """
-    return run_powershell_script("DisplayNameValidation", query)
-
-def check_user_existence_output_samaccount(query: str) -> Dict[str, Any]:
-    """Check if user exists and return their SAM account name.
-    
-    Args:
-        query (str): User information to check
-        
-    Returns:
-        Dict[str, Any]: Status and message information
-    """
-    return run_powershell_script("Check_User_existence_output_samaccount", query)
-
-def add_user_to_security_group(query: str) -> Dict[str, Any]:
-    """Add one or more users to an Active Directory security group.
-    
-    Args:
-        query (str): User and group information
-        
-    Returns:
-        Dict[str, Any]: Status and message information
-    """
-    return run_powershell_script("Add_user_to_security_group(single_or_multiple)", query)
-
-def create_dl(query: str) -> Dict[str, Any]:
-    """Create a Microsoft 365 distribution list.
-    
-    Args:
-        query (str): Distribution list information
-        
-    Returns:
-        Dict[str, Any]: Status and message information
-    """
-    return run_powershell_script("create_dl", query)
-
-def modify_dl(query: str) -> Dict[str, Any]:
-    """Modify an existing Microsoft 365 distribution list.
-    
-    Args:
-        query (str): Distribution list modification details
-        
-    Returns:
-        Dict[str, Any]: Status and message information
-    """
-    return run_powershell_script("modify_dl", query)
-
-
+# Create tool functions dictionary dynamically
+TOOL_FUNCTIONS = {
+    tool_name: create_tool_function(config)
+    for tool_name, config in TOOLS_CONFIG["tools"].items()
+}
 
 # Dynamic tool lookup
 def get_tool_function(tool_name: str) -> Callable[[str], Dict[str, Any]]:
     """Dynamically retrieve a tool function by name."""
-    tool_functions = {
-        "parse_varaibles": parse_variables,
-        "SAMNameValidation": sam_name_validation,
-        "DisplayNameValidation": display_name_validation,
-        "Check_Ad_Group_Existence": check_ad_group_existence,
-        "Check_Owner_Existance": check_owner_existence,
-        "Create_Ad_Group": create_ad_group,
-        "Check_User_existence_output_samaccount": check_user_existence_output_samaccount,
-        "Add_user_to_security_group(single_or_multiple)": add_user_to_security_group,
-        "create_dl": create_dl,
-        "modify_dl": modify_dl,
-        "check_m365_license": check_m365_license
-    }
-    return tool_functions.get(tool_name, lambda x: {
+    return TOOL_FUNCTIONS.get(tool_name, lambda x: {
         "Status": "Error",
         "OutputMessage": "",
         "ErrorMessage": f"Unknown tool: {tool_name}"
@@ -301,7 +190,7 @@ def supervisor_node(state: GraphState) -> Dict[str, Any]:
     additional_variables["ticket_info"] = f"Ticket {state.ticket_number}: {state.short_description}"
 
     # Use the supervisor agent to determine the workflow and tools
-    supervisor_response = ad_agent.invoke({"input": state.short_description})  # Correct the agent used here
+    supervisor_response = workflow.invoke({"input": state.short_description})
     try:
         if isinstance(supervisor_response, str):
             decision = json.loads(supervisor_response)
@@ -373,8 +262,8 @@ def agent_node(state: GraphState) -> Dict[str, Any]:
 # Build graph
 builder = StateGraph(GraphState)
 builder.add_node("supervisor", supervisor_node)
-builder.add_node("ad_agent", agent_node)  # Use generic agent_node
-builder.add_node("m365_agent", agent_node)  # Use generic agent_node
+builder.add_node("ad_agent", agent_node)
+builder.add_node("m365_agent", agent_node)
 builder.add_edge(START, "supervisor")
 builder.add_conditional_edges(
     "supervisor",
